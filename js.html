@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js learning</title>
+	 
+</head>
+<body>
+	<h1>Javascipt learning</h1>
+	<p>Program to output two numbers users input</p>
+	<p id="result1"></p>
+	<p id="result2"></p>
+	<p id="result3"></p>
+	<p id="result4"></p>
+
+	<button onclick="sayHello()">Message</button>
+	<script src="js/myfunction.js"></script>
+	<script>
+		/* multi line comment*/
+		//single lne comment
+		var num1=20;
+		var num2=40
+		sum=num1+num2;
+		dif=num1-num2;
+		//alert("the sum is " +sum+" dif is "+dif)
+		//definging variable
+		var fno;
+		var sno,sum;
+
+		fno=parseFloat(prompt("Enter the first no"));
+		sno=parseFloat(prompt("Enter the second no"));
+		sum=fno+sno;
+		dif=fno-sno;
+		mul=fno*sno;
+		div=fno/sno;
+		document.getElementById("result1").innerHTML="The sum of"+fno+"and"+sno +"is:"+sum;
+		document.getElementById("result2").innerHTML="The dif of"+fno+"and"+sno +"is:"+dif;
+		document.getElementById("result3").innerHTML="The mul of"+fno+"and"+sno +"is:"+mul;
+		document.getElementById("result4").innerHTML="The div of"+fno+"and"+sno +"is:"+div;
+	</script>
+</body>
+</html>

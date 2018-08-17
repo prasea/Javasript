@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Factorial</title>
+</head>
+<body>
+<h1>Factorial</h1>
+<h1><p id="result"></p></h1>
+<script type="text/javascript">
+	var i,result=1,num;
+	num=parseInt(prompt("Enter a number: "));
+	for(i=1;i<=num;i++)
+	{
+		result*=i;
+	}
+		document.getElementById("result").innerHTML="The Factorial of " + num + "  is  " + result;
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Date</title>
+</head>
+<body>
+	<br/>
+	<div id="curtime" style="color:#ff7755; font-weight: 900; font-size: 32px;"></div>
+<script>
+	function update_time(){
+	var hours,minutes,seconds,d;
+	d= new Date();
+	hours=d.getHours();
+	minutes=d.getMinutes();
+	seconds=d.getSeconds();
+	document.getElementById("curtime").innerHTML="Time  " + hours + " : "+ minutes + " : " + seconds;
+	setTimeout(update_time,1000);
+}
+update_time();
+</script>
+</body>
+</html>

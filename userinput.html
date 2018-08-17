@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User Input</title>
+</head>
+<body>
+<form action="" method="post" name="Form" enctype="multipart/form-data" onsubmit="return login_check()">
+	<p style="color: red" id="error"></p>
+	<p style="color: red" id="error_name"> </p>
+	<input type="text" id="name">
+	<br/>
+	<p style="color: red" id="error_pass"> </p>
+	<input type="password" id="pass">
+	<br/>
+	<input type="submit" id="submit">
+	<br/>
+	<p style="color: red" id="error_all"> </p>
+</form>
+<script>
+	function login_check(){
+	name=document.getElementById("name").value;
+	pass=document.getElementById("pass").value;
+	if(name=="admin" && pass=="admin")
+	{
+	window.location = "welcome.html";
+	return false;
+	}
+	else if(name=="" && pass=="")
+	{
+		document.getElementById("error").innerHTML="Please fill both name and password";
+		return false;
+	}
+	else if( pass=="")
+	{
+		document.getElementById("error_pass").innerHTML="Please fill the password";
+		return false; //Screen
+	}
+	else if( name=="")
+	{
+		document.getElementById("error_name").innerHTML="Please fill the name";
+		return false;
+	}
+	else
+	{
+		document.getElementById("error_all").innerHTML="Incorrect Username and password";
+		return false;
+	}	
+	return;
+}
+</script>
+</body>
+</html>

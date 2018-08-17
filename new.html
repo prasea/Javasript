@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Input and Show</title>
+	<style>
+		#name_n,#email_e,#message_m{
+			color: #ff2232;
+		}
+	</style>
+</head>
+<body>
+<form action="" method="post" name="Form" enctype="multipart/form-data" onsubmit="return login_check()">
+	<input type="text" id="name">
+	<br/>
+	<br/>
+	<input type="email" id="email">
+	<br/>
+	<br/>
+	<input type="text" id="message" style="height: 200px">
+	<br/>
+	<br/>
+	<input type="submit" id="submit">
+	<br/>
+	<br/>
+	<br/>
+	<h1>Your Input</h1>
+	<br/>
+	<p id="name_n"> </p>
+	<br/>
+	<p id="email_e"> </p>
+	<br/>
+	<p id="message_m"> </p>
+</form>
+<script>
+	function login_check(){
+	name=document.getElementById("name").value;
+	email=document.getElementById("email").value;
+	message=document.getElementById("message").value
+	document.getElementById("name_n").innerHTML="Name: "+ name;
+	document.getElementById("email_e").innerHTML="Email: " + email;
+	document.getElementById("message_m").innerHTML="Message: " + message;
+	return false;
+}
+</script>
+</body>
+</html>
